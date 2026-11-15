@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torres Cleaning Of America — Cleaning Service in Lansing, MI</title>
+<meta name="description" content="Torres Cleaning Of America — cleaning service and janitorial service in Lansing, Michigan. Free quotes. Open 24 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#0f766e; --teal-dark:#0b5e57; --teal-light:#ccfbf1;
+    --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --bg:#f8fafc; --card:#ffffff;
+    --accent:#f59e0b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  a{color:var(--teal);text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  /* Demo banner */
+  .demo-banner{background:#1e293b;color:#f8fafc;text-align:center;padding:10px 16px;font-size:13px;font-weight:600;letter-spacing:.04em}
+  .demo-banner span{color:#fbbf24}
+  /* Header */
+  header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:19px;color:var(--ink);letter-spacing:-.02em}
+  .logo b{color:var(--teal)}
+  .nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+  .nav-links a{color:var(--muted);font-weight:600;font-size:14px}
+  .nav-links a:hover{color:var(--teal)}
+  .btn{display:inline-block;background:var(--teal);color:#fff;font-weight:700;padding:12px 22px;border-radius:10px;border:0;cursor:pointer;font-size:15px;text-align:center}
+  .btn:hover{background:var(--teal-dark)}
+  .btn-outline{background:#fff;color:var(--teal);border:2px solid var(--teal)}
+  .btn-outline:hover{background:var(--teal-light)}
+  .btn-sm{padding:9px 16px;font-size:14px}
+  /* Hero */
+  .hero{background:linear-gradient(135deg,#0f766e 0%,#115e59 55%,#134e4a 100%);color:#fff;padding:72px 0 64px}
+  .hero h1{font-size:clamp(32px,5vw,52px);line-height:1.08;font-weight:800;letter-spacing:-.02em;max-width:640px}
+  .hero p.lede{font-size:18px;color:#ccfbf1;margin:18px 0 28px;max-width:560px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .btn{background:#fff;color:var(--teal-dark)}
+  .hero .btn:hover{background:var(--teal-light)}
+  .hero .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+  .hero .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  .hero-note{margin-top:22px;font-size:14px;color:#99f6e4}
+  /* Trust cards */
+  .trust{padding:40px 0 8px}
+  .trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+  .trust-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .trust-card .mark{width:40px;height:40px;border-radius:10px;background:var(--teal-light);color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:12px}
+  .trust-card h3{font-size:16px;font-weight:700;margin-bottom:4px}
+  .trust-card p{font-size:14px;color:var(--muted)}
+  /* Sections */
+  section{padding:56px 0}
+  .sec-head{max-width:640px;margin-bottom:28px}
+  .sec-head h2{font-size:clamp(26px,3.5vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:16px}
+  /* Services */
+  .filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;align-items:center}
+  .filter-bar input[type="search"]{flex:1;min-width:220px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;background:#fff}
+  .filter-bar input[type="search"]:focus{outline:2px solid var(--teal);outline-offset:1px}
+  .chip{padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;color:var(--muted)}
+  .chip.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .svc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column}
+  .svc-card .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);background:var(--teal-light);border-radius:999px;padding:4px 10px;margin-bottom:12px;width:fit-content}
+  .svc-card h3{font-size:19px;font-weight:700;margin-bottom:8px}
+  .svc-card p{font-size:15px;color:var(--muted);flex:1}
+  .svc-card .svc-cta{margin-top:16px;font-weight:700;font-size:14px}
+  .no-results{display:none;background:#fff;border:1px dashed var(--line);border-radius:14px;padding:28px;text-align:center;color:var(--muted)}
+  /* Spotlight */
+  .spotlight{background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #fed7aa;border-radius:18px;padding:36px;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+  .spotlight h2{font-size:clamp(24px,3vw,30px);font-weight:800;letter-spacing:-.02em;line-height:1.2}
+  .spotlight p{color:#57534e;margin:12px 0 20px}
+  .spotlight .when{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b45309}
+  .spotlight-side{background:#fff;border:1px solid #fed7aa;border-radius:14px;padding:22px}
+  .spotlight-side h3{font-size:16px;font-weight:700;margin-bottom:10px}
+  .spotlight-side ul{list-style:none}
+  .spotlight-side li{padding:8px 0;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+  .spotlight-side li:first-child{border-top:0}
+  .spotlight-side li b{color:var(--ink)}
+  /* How it works */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;counter-reset:step}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .step .num{width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:19px;margin-bottom:14px}
+  .step h3{font-size:17px;font-weight:700;margin-bottom:6px}
+  .step p{font-size:14px;color:var(--muted)}
+  /* Quote form */
+  .quote-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+  .quote-form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px}
+  .quote-form h2{font-size:24px;font-weight:800;margin-bottom:6px}
+  .quote-form>p{color:var(--muted);font-size:15px;margin-bottom:20px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+  .field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;background:#fff}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--teal);outline-offset:1px}
+  .field textarea{min-height:96px;resize:vertical}
+  .radio-row{display:flex;gap:18px;flex-wrap:wrap}
+  .radio-row label{display:flex;align-items:center;gap:8px;font-weight:500;font-size:15px}
+  .summary{background:var(--teal-light);border:1px solid #5eead4;border-radius:16px;padding:28px}
+  .summary h2{font-size:20px;font-weight:800;margin-bottom:6px}
+  .summary>p{font-size:14px;color:var(--muted);margin-bottom:16px}
+  .summary-box{background:#fff;border-radius:12px;padding:18px;font-size:15px;white-space:pre-wrap;border:1px solid #99f6e4}
+  .summary-empty{color:var(--muted);font-size:15px}
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .contact-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+  .contact-card h3{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .contact-card p,.contact-card a{font-size:17px;font-weight:700;color:var(--ink)}
+  .contact-card .sub{font-size:14px;color:var(--muted);font-weight:400;margin-top:4px}
+  footer{background:#0f172a;color:#94a3b8;padding:28px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer b{color:#e2e8f0}
+  @media (max-width:760px){
+    .spotlight{grid-template-columns:1fr;padding:26px}
+    .quote-wrap{grid-template-columns:1fr}
+    section{padding:40px 0}
+    .hero{padding:52px 0 48px}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-banner"><span>DEMO PREVIEW</span> — This site was built for Torres Cleaning Of America to preview. It is not live on their domain yet.</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Torres <b>Cleaning</b> Of America</div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#quote">Free Quote</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-sm" href="tel:+15178944798">Call (517) 894-4798</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Clean homes. Clean offices. Done right.</h1>
+    <p class="lede">Torres Cleaning Of America handles regular house cleaning, deep cleaning, move-in and move-out cleaning, and office &amp; janitorial cleaning across Lansing, Michigan.</p>
+    <div class="hero-actions">
+      <a class="btn" href="tel:+15178944798">Call (517) 894-4798</a>
+      <a class="btn btn-ghost" href="#quote">Get a Free Quote</a>
+    </div>
+    <p class="hero-note">Free quotes &middot; Residential &amp; commercial &middot; Open 24 hours</p>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-card">
+      <div class="mark">$</div>
+      <h3>Free Quotes</h3>
+      <p>Get a free quote before you book — no cost to find out what your cleaning will run.</p>
+    </div>
+    <div class="trust-card">
+      <div class="mark">H</div>
+      <h3>Residential &amp; Commercial</h3>
+      <p>Cleaning for homes and businesses, from a single room to a full office.</p>
+    </div>
+    <div class="trust-card">
+      <div class="mark">J</div>
+      <h3>Janitorial Service</h3>
+      <p>Regular janitorial cleaning for offices and commercial spaces.</p>
+    </div>
+    <div class="trust-card">
+      <div class="mark">24</div>
+      <h3>Open 24 Hours</h3>
+      <p>Reach out any time — day or night, we're open.</p>
+    </div>
+    <div class="trust-card">
+      <div class="mark">L</div>
+      <h3>Based in Lansing</h3>
+      <p>Located on S Cedar St in Lansing, Michigan, serving the local area.</p>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Cleaning services</h2>
+      <p>Search or filter to find the cleaning you need. Every job begins with a free quote.</p>
+    </div>
+    <div class="filter-bar">
+      <input type="search" id="svc-search" placeholder="Search services — try &quot;deep&quot; or &quot;office&quot;&hellip;" aria-label="Search services">
+      <button class="chip active" data-filter="all">All services</button>
+      <button class="chip" data-filter="homes">Homes</button>
+      <button class="chip" data-filter="deep">Deep &amp; Move Cleaning</button>
+      <button class="chip" data-filter="offices">Offices &amp; Janitorial</button>
+    </div>
+    <div class="svc-grid" id="svc-grid">
+      <article class="svc-card" data-category="homes" data-name="regular house cleaning">
+        <span class="tag">Homes</span>
+        <h3>Regular House Cleaning</h3>
+        <p>Routine cleaning to keep your home fresh week after week — the regular upkeep that keeps every room ready to live in.</p>
+        <a class="svc-cta" href="#quote" data-service="Regular House Cleaning">Get a free quote &rarr;</a>
+      </article>
+      <article class="svc-card" data-category="deep" data-name="deep cleaning">
+        <span class="tag">Deep &amp; Move Cleaning</span>
+        <h3>Deep Cleaning</h3>
+        <p>A thorough top-to-bottom clean for the spots regular cleaning doesn't reach — a full reset for your home.</p>
+        <a class="svc-cta" href="#quote" data-service="Deep Cleaning">Get a free quote &rarr;</a>
+      </article>
+      <article class="svc-card" data-category="deep" data-name="move-in move-out cleaning">
+        <span class="tag">Deep &amp; Move Cleaning</span>
+        <h3>Move-In / Move-Out Cleaning</h3>
+        <p>Cleaning for moving day — a fresh beginning in a new place, or a clean handoff when you're heading out.</p>
+        <a class="svc-cta" href="#quote" data-service="Move-In / Move-Out Cleaning">Get a free quote &rarr;</a>
+      </article>
+      <article class="svc-card" data-category="offices" data-name="office janitorial cleaning">
+        <span class="tag">Offices &amp; Janitorial</span>
+        <h3>Office &amp; Janitorial Cleaning</h3>
+        <p>Janitorial cleaning for offices and commercial spaces — regular service that keeps your workplace clean and ready for business.</p>
+        <a class="svc-cta" href="#quote" data-service="Office &amp; Janitorial Cleaning">Get a free quote &rarr;</a>
+      </article>
+    </div>
+    <div class="no-results" id="no-results">No services match that search. Try a different word, or call (517) 894-4798 to ask about your job.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="spotlight">
+      <div>
+        <p class="when">Mid-November spotlight</p>
+        <h2>Get the house ready for the holidays</h2>
+        <p>Family and guests are coming — a deep clean now means you can actually enjoy the holidays instead of scrambling to tidy up before everyone arrives. Book your holiday cleaning before the calendar fills up.</p>
+        <a class="btn" href="#quote">Get a Free Holiday Quote</a>
+      </div>
+      <div class="spotlight-side">
+        <h3>Good timing for</h3>
+        <ul>
+          <li><b>Deep cleaning</b> — a full reset before guests arrive</li>
+          <li><b>Regular house cleaning</b> — keep it tidy through the season</li>
+          <li><b>Move-in cleaning</b> — settling into a new place for the holidays</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How it works</h2>
+      <p>Four simple steps from first call to a clean space.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Call or Message</h3>
+        <p>Call (517) 894-4798 or send in the free-quote form below — tell us what you need cleaned.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Free Quote</h3>
+        <p>We go over the job with you and give you a free quote. No cost, no obligation.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Cleaning Day</h3>
+        <p>We show up at the agreed time and get to work on your home or office.</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h3>Done Right</h3>
+        <p>We finish the job and check it over — your space, clean and ready to use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="wrap quote-wrap">
+    <form class="quote-form" id="quote-form">
+      <h2>Get a free quote</h2>
+      <p>Tell us about your job and we'll build a call summary you can read straight to us on the phone. Nothing is submitted anywhere — the call is how jobs get booked.</p>
+      <div class="field">
+        <label for="q-name">Your name</label>
+        <input type="text" id="q-name" placeholder="Your name" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="q-phone">Phone number</label>
+        <input type="tel" id="q-phone" placeholder="(517) 555-0123" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="q-service">Service needed</label>
+        <select id="q-service">
+          <option>Regular House Cleaning</option>
+          <option>Deep Cleaning</option>
+          <option>Move-In / Move-Out Cleaning</option>
+          <option>Office &amp; Janitorial Cleaning</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Home or office?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="q-type" value="Home" checked> Home</label>
+          <label><input type="radio" name="q-type" value="Office"> Office</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="q-notes">Notes</label>
+        <textarea id="q-notes" placeholder="Anything we should know? Size of the space, how often you'd like cleaning, timing, access details…"></textarea>
+      </div>
+      <button type="submit" class="btn" style="width:100%">Build My Call Summary</button>
+    </form>
+    <div class="summary">
+      <h2>Your call summary</h2>
+      <p>Fill out the form and your summary will appear here. Read it to us when you call <a href="tel:+15178944798">(517) 894-4798</a>.</p>
+      <div class="summary-box summary-empty" id="summary-box">Your summary will show up here after you fill out the form.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Contact</h2>
+      <p>Call us any time — we're open 24 hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Phone</h3>
+        <a href="tel:+15178944798">(517) 894-4798</a>
+        <p class="sub">Tap to call — open 24 hours.</p>
+      </div>
+      <div class="contact-card">
+        <h3>Address</h3>
+        <p>6810 S Cedar St #12-a<br>Lansing, MI</p>
+        <p class="sub"><a href="https://www.google.com/maps/search/?api=1&amp;query=6810+S+Cedar+St+Lansing+MI" target="_blank" rel="noopener">Get directions on Google Maps &rarr;</a></p>
+      </div>
+      <div class="contact-card">
+        <h3>Hours</h3>
+        <p>Open 24 hours</p>
+        <p class="sub">Call or message any time, day or night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Torres Cleaning Of America</b> — Cleaning service &amp; janitorial service in Lansing, MI.</div>
+    <div><a href="tel:+15178944798" style="color:#e2e8f0;font-weight:700">(517) 894-4798</a> &middot; Open 24 hours</div>
+  </div>
+</footer>
+
+<script>
+  // Service search + filter
+  (function(){
+    var search = document.getElementById('svc-search');
+    var chips = document.querySelectorAll('.chip');
+    var cards = document.querySelectorAll('.svc-card');
+    var noResults = document.getElementById('no-results');
+    var activeFilter = 'all';
+
+    function applyFilter(){
+      var q = (search.value || '').trim().toLowerCase();
+      var shown = 0;
+      cards.forEach(function(card){
+        var matchesCat = activeFilter === 'all' || card.dataset.category === activeFilter;
+        var matchesText = !q || card.dataset.name.indexOf(q) !== -1 || card.textContent.toLowerCase().indexOf(q) !== -1;
+        var show = matchesCat && matchesText;
+        card.style.display = show ? '' : 'none';
+        if (show) shown++;
+      });
+      noResults.style.display = shown === 0 ? 'block' : 'none';
+    }
+
+    search.addEventListener('input', applyFilter);
+    chips.forEach(function(chip){
+      chip.addEventListener('click', function(){
+        chips.forEach(function(c){ c.classList.remove('active'); });
+        chip.classList.add('active');
+        activeFilter = chip.dataset.filter;
+        applyFilter();
+      });
+    });
+
+    // Pre-fill service in quote form from service card links
+    document.querySelectorAll('.svc-cta').forEach(function(link){
+      link.addEventListener('click', function(){
+        var select = document.getElementById('q-service');
+        select.value = link.dataset.service;
+      });
+    });
+  })();
+
+  // Free-quote form -> call summary (nothing submitted anywhere)
+  (function(){
+    var form = document.getElementById('quote-form');
+    var box = document.getElementById('summary-box');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('q-name').value.trim();
+      var phone = document.getElementById('q-phone').value.trim();
+      var service = document.getElementById('q-service').value;
+      var type = (document.querySelector('input[name="q-type"]:checked') || {}).value || 'Home';
+      var notes = document.getElementById('q-notes').value.trim();
+      var lines = [];
+      lines.push('Free quote request — Torres Cleaning Of America');
+      lines.push('----------------------------------------');
+      if (name) lines.push('Name: ' + name);
+      if (phone) lines.push('Phone: ' + phone);
+      lines.push('Service needed: ' + service);
+      lines.push('Property type: ' + type);
+      if (notes) lines.push('Notes: ' + notes);
+      lines.push('----------------------------------------');
+      lines.push('Call (517) 894-4798 and read this summary to book the job.');
+      box.textContent = lines.join('\n');
+      box.classList.remove('summary-empty');
+      box.scrollIntoView({behavior:'smooth', block:'nearest'});
+    });
+  })();
+</script>
+
+</body>
+</html>
